@@ -1,16 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../img/Logo.png";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
+		<nav className="navbar navbar-light bg-light">
+			<a className="navbar-brand navbar-logo" href="#">
+				<img src={Logo} />
+			</a>
+			<div className="dropdown">
+				<button
+					className="btn btn-primary dropdown-toggle"
+					type="button"
+					id="dropdownMenuButton1"
+					data-bs-toggle="dropdown"
+					aria-expanded="false">
+					Favorites
+				</button>
+				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li>
+						<a className="dropdown-item" href="#">
+							Action
+						</a>
+					</li>
+					<li>
+						<a className="dropdown-item" href="#">
+							Another action
+						</a>
+					</li>
+					<li>
+						<a className="dropdown-item" href="#">
+							Something else here
+						</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 	);

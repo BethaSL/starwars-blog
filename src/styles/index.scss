@@ -1,3 +1,37 @@
-/* 
-    General Styles
-*/
+/*Logo*/
+.navbar-logo > img {
+    width: 100px;
+}
+
+/*Cajas con las cards de cada grupo*/
+.borders{
+    border: 1px solid black;
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 50px;
+}
+
+h1{
+    color: red;
+}
+
+/*Cards*/
+.card{
+    min-width: 400px;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.card__button{
+    position: relative;
+    background: white;
+    color: blue;
+}
+
+.card__heart{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    background: white;
+    color: rgb(250, 204, 1);
+}
