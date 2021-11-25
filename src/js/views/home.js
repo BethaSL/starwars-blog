@@ -13,7 +13,7 @@ export const Home = () => {
 				</h1>
 				<div className="borders">
 					{store.people.map(item => {
-						return <Card key={item.uid} item={item} />;
+						return <Card key={item.udi} item={item} endpoint="people" />;
 					})}
 				</div>
 			</div>
@@ -23,7 +23,7 @@ export const Home = () => {
 				</h1>
 				<div className="borders">
 					{store.planets.map(item => {
-						return <Card key={item.uid} item={item} />;
+						return <Card key={item.uid} item={item} endpoint="planets" />;
 					})}
 				</div>
 			</div>
@@ -33,7 +33,7 @@ export const Home = () => {
 				</h1>
 				<div className="borders">
 					{store.vehicles.map(item => {
-						return <Card key={item.uid} item={item} />;
+						return <Card key={item.uid} item={item} endpoint="vehicles" />;
 					})}
 				</div>
 			</div>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 
-export const Card = ({ item }) => {
+export const Card = ({ item, endpoint }) => {
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="card">
 			<img src="https://via.placeholder.com/300x200" className="card-img-top" alt="..." />
@@ -15,7 +17,12 @@ export const Card = ({ item }) => {
 					<a href="#" className="btn btn-primary card__button">
 						Learn more
 					</a>
-					<a href="#" className="btn btn-warning card__heart">
+					<a
+						href="#"
+						className="btn btn-warning card__heart"
+						onClick={() => {
+							actions.addFavorites(item.name, endpoint);
+						}}>
 						<i className="fa fa-heart" />
 					</a>
 				</div>
@@ -25,5 +32,6 @@ export const Card = ({ item }) => {
 };
 
 Card.propTypes = {
-	item: PropTypes.object
+	item: PropTypes.object,
+	endpoint: PropTypes.string
 };
