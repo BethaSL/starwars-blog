@@ -13,7 +13,7 @@ export const Home = () => {
 				</h1>
 				<div className="borders">
 					{store.people.map(item => {
-						return <Card key={item.udi} item={item} endpoint="people" />;
+						return <Card key={item.uid} item={item} endpoint="people" />;
 					})}
 				</div>
 			</div>
