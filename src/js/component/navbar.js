@@ -6,20 +6,20 @@ import Logo from "../../img/Logo.png";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light bg-light">
-			<a className="navbar-brand navbar-logo" href="#">
+		<nav className="navbar fixed-top navbar-dark bg-dark">
+			<Link to="/" className="navbar-brand navbar-logo">
 				<img src={Logo} />
-			</a>
+			</Link>
 			<div className="dropdown">
 				<button
-					className="btn btn-primary dropdown-toggle"
+					className="btn btn-warning dropdown-toggle"
 					type="button"
 					id="dropdownMenuButton1"
 					data-bs-toggle="dropdown"
 					aria-expanded="false">
 					{`Favorites ${store.favorites.length}`}
 				</button>
-				<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+				<ul className="dropdown-menu px-2 dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
 					{store.favorites.map(favorite => {
 						return (
 							<li

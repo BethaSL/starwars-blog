@@ -1,13 +1,6 @@
-/*Navbar*/
-.navbar{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-}
-
 /*Logo*/
 .navbar-logo > img {
-    width: 90px;
+    width: 100px;
 }
 
 /*Cajas con las cards de cada grupo*/
@@ -25,7 +18,7 @@ h1{
 .card{
     min-width: 400px;
     max-width: 400px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .card__button{
@@ -53,20 +46,13 @@ li {
 }
 
 .character__card{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 400px;
+    height: 400px;
+    display: flex;
 }
 
 .character__info{
     color: red;
     border-top: 1px solid red;
     padding-top: 20px;
-}
-
-.fisrt-row{
-    margin-top: 100px;
-}
-
-.char-row{
-    margin-top: 100px;
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export const Card = ({ item, endpoint }) => {
 	const { store, actions } = useContext(Context);
@@ -14,9 +15,9 @@ export const Card = ({ item, endpoint }) => {
                     content.`}
 				</p>
 				<div className="card__footer">
-					<a href="#" className="btn btn-primary card__button">
+					<Link to={`/${endpoint}/${item.uid}`} type="button" className="btn btn-primary card__button">
 						Learn more
-					</a>
+					</Link>
 					<a
 						href="#"
 						className="btn btn-warning card__heart"

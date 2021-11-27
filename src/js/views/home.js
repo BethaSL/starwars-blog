@@ -7,7 +7,7 @@ export const Home = () => {
 	return (
 		//Characters
 		<div className="container">
-			<div className="row">
+			<div className="row fisrt-row">
 				<h1>
 					<strong>Characters</strong>
 				</h1>
